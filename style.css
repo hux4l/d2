@@ -1,0 +1,151 @@
+/* #4A4AE4
+  #F14F37
+  #259A0B
+  #9A884F
+  #259A0B
+  #E4C69A
+  #7B7BFE
+  #FE694F
+  #919291
+  #00A200
+  #4748B0
+  #009E00
+  #5255CE
+  #00CF00
+  #504FC6
+  #C5453C
+  #1A9E00
+  #5750D4
+  #BD5135
+  #9C8E69
+  #C7B377
+  #FFFFFF
+  #6E6EFF
+   */
+@font-face {
+  font-family: diablo;
+  src: local("diablo"), url(/fonts/d2.woff2) format("truetype");
+}
+
+* {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* overflow-y: hidden; */
+}
+
+.page-container {
+  margin: 0 auto;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  padding-top: 10rem;
+  background-color: #666;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.89);
+  padding: 0.5rem;
+  max-width: 60rem;
+  font-family: diablo;
+}
+
+.font-size {
+  font-size: 2.5rem;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.name-common {
+  font-size: inherit;
+  color: white;
+}
+
+.name-ethereal-socket {
+  font-size: inherit;
+  color: #666;
+}
+
+.name-magic {
+  font-size: inherit;
+  color: #6e6eff;
+}
+
+.name-set {
+  font-size: inherit;
+  color: #00ff00;
+}
+
+.name-unique {
+  font-size: inherit;
+  color: #c7b377;
+}
+
+.requirement-passed {
+  font-size: inherit;
+  color: white;
+}
+
+.name-rune-crafted {
+  font-size: inherit;
+  color: #ffa800;
+}
+
+.requirement-not {
+  font-size: inherit;
+  color: #ff4d4d;
+}
+
+.bonuses {
+  font-size: inherit;
+  text-align: center;
+}
+
+.container .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.container p {
+  font-size: inherit;
+}
+
+.padding-set {
+  padding: 1.5rem 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
