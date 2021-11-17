@@ -1,0 +1,49 @@
+{
+  "name": "tYN.GS",
+  "type": "'Yf=8",
+  "runes": [],
+  "primaryStat": {
+    "name": "",
+    "value": "o-lM="
+  },
+  "durability": {
+    "curr": "tM@",
+    "max": "W$1Y&"
+  },
+  "requirements": {
+    "stat": "rp'7,rlNjR",
+    "value": "*xF4FI"
+  },
+  "weaponClass": {
+    "class": "!FUN^;",
+    "speed": "u|0Zg95%i&"
+  },
+  "bonuses": {
+    "bonus": {
+      "name": "d.m_\"lI",
+      "value": "h<jXo@3e",
+      "bonusLevel": "_5gh9~",
+      "characterClass": " 6"
+    },
+    "setBonus": {
+      "name": "SJntY:{T:f",
+      "value": "O8,MY",
+      "bonusLevel": "Y{'mQz",
+      "characterClass": "c#jY"
+    }
+  },
+  "setBonuses": {
+    "bonus": {
+      "name": "F%",
+      "value": "P`n.Jcea",
+      "bonusLevel": "",
+      "characterClass": "#N/GW&~U~"
+    }
+  },
+  "setItems": [
+    {
+      "name": "/RXv]hc",
+      "active": false
+    }
+  ]
+}

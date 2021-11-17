@@ -42,7 +42,6 @@
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
-  padding-top: 10rem;
   background-color: #666;
 }
 

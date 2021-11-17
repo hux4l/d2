@@ -1,0 +1,55 @@
+{
+  "name": "",
+  "type": "",
+  "runes": [],
+  "primaryStat": {
+    "name": "",
+    "value": ""
+  },
+
+  "durability": {
+    "curr": "",
+    "max": ""
+  },
+
+  "requirements": {
+    "stat": "",
+    "value": ""
+  },
+
+  "weaponClass": {
+    "class": "",
+    "speed": ""
+  },
+
+  "bonuses": {
+    "bonus": {
+      "name": "",
+      "value": "",
+      "bonusLevel": "",
+      "characterClass": ""
+    },
+    "setBonus": {
+      "name": "",
+      "value": "",
+      "bonusLevel": "",
+      "characterClass": ""
+    }
+  },
+
+  "setBonuses": {
+    "bonus": {
+      "name": "",
+      "value": "",
+      "bonusLevel": "",
+      "characterClass": ""
+    }
+  },
+
+  "setItems": [
+    {
+      "name": "",
+      "active": true
+    }
+  ]
+}

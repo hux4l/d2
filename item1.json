@@ -1,0 +1,61 @@
+{
+  "name": "B~X",
+  "type": ",",
+  "runes": [],
+  "primaryStat": {
+    "name": "z?k",
+    "value": "5"
+  },
+  "durability": {
+    "curr": "+:  yQE^B",
+    "max": "=sL&Ga[b"
+  },
+  "requirements": {
+    "stat": "",
+    "value": "d9~SF"
+  },
+  "weaponClass": {
+    "class": ">%yR,;@1",
+    "speed": "HX4\\O7cFV"
+  },
+  "bonuses": {
+    "bonus": {
+      "name": "w't\"w[I",
+      "value": "Z",
+      "bonusLevel": "}3",
+      "characterClass": "Yw4hq$:U)i"
+    },
+    "setBonus": {
+      "name": "Ng",
+      "value": "xSu1BY",
+      "bonusLevel": "R3;T)$ s+0",
+      "characterClass": "Lt+o8wB'"
+    }
+  },
+  "setBonuses": {
+    "bonus": {
+      "name": "3yv(l(\\!",
+      "value": "",
+      "bonusLevel": ":+VR3d@|6",
+      "characterClass": "XG<uft*"
+    }
+  },
+  "setItems": [
+    {
+      "name": ">.d]",
+      "active": false
+    },
+    {
+      "name": "u`PGr5&Jn4",
+      "active": false
+    },
+    {
+      "name": "z}XE#YF]9",
+      "active": true
+    },
+    {
+      "name": "exWsSBE)`",
+      "active": false
+    }
+  ]
+}
