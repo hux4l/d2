@@ -1,0 +1,452 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1637175099.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"name",
+		"type",
+		"runes",
+		"primaryStat",
+		"durability",
+		"requirements",
+		"weaponClass",
+		"bonuses",
+		"setBonuses",
+		"setItems"
+	],
+	"properties": {
+		"name": {
+			"$id": "#root/name", 
+			"title": "Name", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				""
+			],
+			"pattern": "^.*$"
+		},
+		"type": {
+			"$id": "#root/type", 
+			"title": "Type", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				""
+			],
+			"pattern": "^.*$"
+		},
+		"runes": {
+			"$id": "#root/runes", 
+			"title": "Runes", 
+			"type": "array",
+			"default": []
+		},
+		"primaryStat": {
+			"$id": "#root/primaryStat", 
+			"title": "Primarystat", 
+			"type": "object",
+			"required": [
+				"stat",
+				"name",
+				"value"
+			],
+			"properties": {
+				"stat": {
+					"$id": "#root/primaryStat/stat", 
+					"title": "Stat", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						""
+					],
+					"pattern": "^.*$"
+				},
+				"name": {
+					"$id": "#root/primaryStat/name", 
+					"title": "Name", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						""
+					],
+					"pattern": "^.*$"
+				},
+				"value": {
+					"$id": "#root/primaryStat/value", 
+					"title": "Value", 
+					"type": "integer",
+					"default": "",
+					"examples": [
+						""
+					],
+					"pattern": "^.*$"
+				}
+			}
+		}
+,
+		"durability": {
+			"$id": "#root/durability", 
+			"title": "Durability", 
+			"type": "object",
+			"required": [
+				"curr",
+				"max"
+			],
+			"properties": {
+				"curr": {
+					"$id": "#root/durability/curr", 
+					"title": "Curr", 
+					"type": "integer",
+					"default": "",
+					"examples": [
+						2
+					],
+					"pattern": "^.*$"
+				},
+				"max": {
+					"$id": "#root/durability/max", 
+					"title": "Max", 
+					"type": "integer",
+					"default": "",
+					"examples": [
+						5
+					],
+					"pattern": "^.*$"
+				}
+			}
+		}
+,
+		"requirements": {
+			"$id": "#root/requirements", 
+			"title": "Requirements", 
+			"type": "object",
+			"required": [
+				"stat",
+				"name",
+				"value"
+			],
+			"properties": {
+				"stat": {
+					"$id": "#root/requirements/stat", 
+					"title": "Stat", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						""
+					],
+					"pattern": "^.*$"
+				},
+				"name": {
+					"$id": "#root/requirements/name", 
+					"title": "Name", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						""
+					],
+					"pattern": "^.*$"
+				},
+				"value": {
+					"$id": "#root/requirements/value", 
+					"title": "Value", 
+					"type": "integer",
+					"default": "",
+					"examples": [
+						5
+					],
+					"pattern": "^.*$"
+				}
+			}
+		}
+,
+		"weaponClass": {
+			"$id": "#root/weaponClass", 
+			"title": "Weaponclass", 
+			"type": "object",
+			"required": [
+				"class",
+				"speed"
+			],
+			"properties": {
+				"class": {
+					"$id": "#root/weaponClass/class", 
+					"title": "Class", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						""
+					],
+					"pattern": "^.*$"
+				},
+				"speed": {
+					"$id": "#root/weaponClass/speed", 
+					"title": "Speed", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						""
+					],
+					"pattern": "^.*$"
+				}
+			}
+		}
+,
+		"bonuses": {
+			"$id": "#root/bonuses", 
+			"title": "Bonuses", 
+			"type": "object",
+			"required": [
+				"bonus",
+				"setBonus"
+			],
+			"properties": {
+				"bonus": {
+					"$id": "#root/bonuses/bonus", 
+					"title": "Bonus", 
+					"type": "object",
+					"required": [
+						"name",
+						"stat",
+						"value",
+						"bonusLevel",
+						"characterClass"
+					],
+					"properties": {
+						"name": {
+							"$id": "#root/bonuses/bonus/name", 
+							"title": "Name", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						},
+						"stat": {
+							"$id": "#root/bonuses/bonus/stat", 
+							"title": "Stat", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						},
+						"value": {
+							"$id": "#root/bonuses/bonus/value", 
+							"title": "Value", 
+							"type": "integer",
+							"default": "",
+							"examples": [
+								5
+							],
+							"pattern": "^.*$"
+						},
+						"bonusLevel": {
+							"$id": "#root/bonuses/bonus/bonusLevel", 
+							"title": "Bonuslevel", 
+							"type": "integer",
+							"default": "",
+							"examples": [
+								5
+							],
+							"pattern": "^.*$"
+						},
+						"characterClass": {
+							"$id": "#root/bonuses/bonus/characterClass", 
+							"title": "Characterclass", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						}
+					}
+				}
+,
+				"setBonus": {
+					"$id": "#root/bonuses/setBonus", 
+					"title": "Setbonus", 
+					"type": "object",
+					"required": [
+						"name",
+						"stat",
+						"value",
+						"bonusLevel",
+						"characterClass"
+					],
+					"properties": {
+						"name": {
+							"$id": "#root/bonuses/setBonus/name", 
+							"title": "Name", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						},
+						"stat": {
+							"$id": "#root/bonuses/setBonus/stat", 
+							"title": "Stat", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						},
+						"value": {
+							"$id": "#root/bonuses/setBonus/value", 
+							"title": "Value", 
+							"type": "integer",
+							"default": "",
+							"examples": [
+								5
+							],
+							"pattern": "^.*$"
+						},
+						"bonusLevel": {
+							"$id": "#root/bonuses/setBonus/bonusLevel", 
+							"title": "Bonuslevel", 
+							"type": "integer",
+							"default": "",
+							"examples": [
+								5
+							],
+							"pattern": "^.*$"
+						},
+						"characterClass": {
+							"$id": "#root/bonuses/setBonus/characterClass", 
+							"title": "Characterclass", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						}
+					}
+				}
+
+			}
+		}
+,
+		"setBonuses": {
+			"$id": "#root/setBonuses", 
+			"title": "Setbonuses", 
+			"type": "object",
+			"required": [
+				"bonus"
+			],
+			"properties": {
+				"bonus": {
+					"$id": "#root/setBonuses/bonus", 
+					"title": "Bonus", 
+					"type": "object",
+					"required": [
+						"name",
+						"stat",
+						"value",
+						"bonusLevel",
+						"characterClass"
+					],
+					"properties": {
+						"name": {
+							"$id": "#root/setBonuses/bonus/name", 
+							"title": "Name", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						},
+						"stat": {
+							"$id": "#root/setBonuses/bonus/stat", 
+							"title": "Stat", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						},
+						"value": {
+							"$id": "#root/setBonuses/bonus/value", 
+							"title": "Value", 
+							"type": "integer",
+							"default": "",
+							"examples": [
+								5
+							],
+							"pattern": "^.*$"
+						},
+						"bonusLevel": {
+							"$id": "#root/setBonuses/bonus/bonusLevel", 
+							"title": "Bonuslevel", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						},
+						"characterClass": {
+							"$id": "#root/setBonuses/bonus/characterClass", 
+							"title": "Characterclass", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						}
+					}
+				}
+
+			}
+		}
+,
+		"setItems": {
+			"$id": "#root/setItems", 
+			"title": "Setitems", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/setItems/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"name",
+					"active"
+				],
+				"properties": {
+					"name": {
+						"$id": "#root/setItems/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							""
+						],
+						"pattern": "^.*$"
+					},
+					"active": {
+						"$id": "#root/setItems/items/active", 
+						"title": "Active", 
+						"type": "boolean",
+						"examples": [
+							true
+						],
+						"default": true
+					}
+				}
+			}
+
+		}
+	}
+}

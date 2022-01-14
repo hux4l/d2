@@ -1,0 +1,88 @@
+{
+  "name": "Sigons Complete Steel",
+  "set": "sigons_complete_steel",
+  "setBonuses": [
+    {
+      "name": "% Life stolen per hit",
+      "stat": "lifePerHit",
+      "value": 10,
+      "characterClass": "",
+      "reqPieces": 2
+    },
+    {
+      "name": " Defense",
+      "stat": "defense",
+      "value": 100,
+      "characterClass": "",
+      "reqPieces": 3
+    },
+    {
+      "name": "% Fire Resistance",
+      "stat": "resistFire",
+      "value": 12,
+      "characterClass": "",
+      "reqPieces": 6
+    },
+    {
+      "name": "Atacker Takes Damage of ",
+      "stat": "attackerDamage",
+      "value": 12,
+      "characterClass": "",
+      "reqPieces": 6
+    },
+    {
+      "name": "Damage taken reduced by ",
+      "stat": "damageTakenReduced",
+      "value": 7,
+      "characterClass": "",
+      "reqPieces": 6
+    },
+    {
+      "name": " Maximum Fire Damage",
+      "stat": "fireDamage",
+      "value": 24,
+      "characterClass": "",
+      "reqPieces": 6
+    },
+    {
+      "name": " Mana",
+      "stat": "mana",
+      "value": 20,
+      "characterClass": "",
+      "reqPieces": 6
+    }
+  ],
+
+  "setItems": [
+    {
+      "id": "sigons_complete_steel_1",
+      "name": "Sigon's Guard",
+      "active": false
+    },
+    {
+      "id": "sigons_complete_steel_2",
+      "name": "Sigons Wrap",
+      "active": false
+    },
+    {
+      "id": "sigons_complete_steel_3",
+      "name": "Sigon's Sabot",
+      "active": false
+    },
+    {
+      "id": "sigons_complete_steel_4",
+      "name": "Sigon's Shelter",
+      "active": false
+    },
+    {
+      "id": "sigons_complete_steel_5",
+      "name": "Sigon's Visor",
+      "active": false
+    },
+    {
+      "id": "sigons_complete_steel_6",
+      "name": "Sigon's Gage",
+      "active": false
+    }
+  ]
+}

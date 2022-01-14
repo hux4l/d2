@@ -1,0 +1,464 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1637177450.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"id",
+		"name",
+		"type",
+		"runes",
+		"primaryStat",
+		"durability",
+		"required",
+		"itemSpeed",
+		"bonuses",
+		"sBonus"
+	],
+	"properties": {
+		"id": {
+			"$id": "#root/id", 
+			"title": "Id", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"sigons_complete_steel_4"
+			],
+			"pattern": "^.*$"
+		},
+		"name": {
+			"$id": "#root/name", 
+			"title": "Name", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"Sigon's Shelter"
+			],
+			"pattern": "^.*$"
+		},
+		"type": {
+			"$id": "#root/type", 
+			"title": "Type", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"Gothic Plate"
+			],
+			"pattern": "^.*$"
+		},
+		"runes": {
+			"$id": "#root/runes", 
+			"title": "Runes", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/runes/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"name",
+					"rank",
+					"stat",
+					"iLvl",
+					"CLvl"
+				],
+				"properties": {
+					"name": {
+						"$id": "#root/runes/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Tir"
+						],
+						"pattern": "^.*$"
+					},
+					"rank": {
+						"$id": "#root/runes/items/rank", 
+						"title": "Rank", 
+						"type": "integer",
+						"examples": [
+							3
+						],
+						"default": 0
+					},
+					"stat": {
+						"$id": "#root/runes/items/stat", 
+						"title": "Stat", 
+						"type": "object",
+						"required": [
+							"name",
+							"stat",
+							"value"
+						],
+						"properties": {
+							"name": {
+								"$id": "#root/runes/items/stat/name", 
+								"title": "Name", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"Mana per Kill"
+								],
+								"pattern": "^.*$"
+							},
+							"stat": {
+								"$id": "#root/runes/items/stat/stat", 
+								"title": "Stat", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"manaPK"
+								],
+								"pattern": "^.*$"
+							},
+							"value": {
+								"$id": "#root/runes/items/stat/value", 
+								"title": "Value", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"2"
+								],
+								"pattern": "^.*$"
+							}
+						}
+					}
+,
+					"iLvl": {
+						"$id": "#root/runes/items/iLvl", 
+						"title": "Ilvl", 
+						"type": "integer",
+						"examples": [
+							13
+						],
+						"default": 0
+					},
+					"CLvl": {
+						"$id": "#root/runes/items/CLvl", 
+						"title": "Clvl", 
+						"type": "integer",
+						"examples": [
+							13
+						],
+						"default": 0
+					}
+				}
+			}
+
+		},
+		"primaryStat": {
+			"$id": "#root/primaryStat", 
+			"title": "Primarystat", 
+			"type": "object",
+			"required": [
+				"stat",
+				"name",
+				"value"
+			],
+			"properties": {
+				"stat": {
+					"$id": "#root/primaryStat/stat", 
+					"title": "Stat", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"defense"
+					],
+					"pattern": "^.*$"
+				},
+				"name": {
+					"$id": "#root/primaryStat/name", 
+					"title": "Name", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"Defense"
+					],
+					"pattern": "^.*$"
+				},
+				"value": {
+					"$id": "#root/primaryStat/value", 
+					"title": "Value", 
+					"type": "integer",
+					"examples": [
+						170
+					],
+					"default": 0
+				}
+			}
+		}
+,
+		"durability": {
+			"$id": "#root/durability", 
+			"title": "Durability", 
+			"type": "object",
+			"required": [
+				"curr",
+				"max"
+			],
+			"properties": {
+				"curr": {
+					"$id": "#root/durability/curr", 
+					"title": "Curr", 
+					"type": "integer",
+					"examples": [
+						35
+					],
+					"default": 0
+				},
+				"max": {
+					"$id": "#root/durability/max", 
+					"title": "Max", 
+					"type": "integer",
+					"examples": [
+						55
+					],
+					"default": 0
+				}
+			}
+		}
+,
+		"required": {
+			"$id": "#root/required", 
+			"title": "Required", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/required/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"stat",
+					"name",
+					"value"
+				],
+				"properties": {
+					"stat": {
+						"$id": "#root/required/items/stat", 
+						"title": "Stat", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"strenght"
+						],
+						"pattern": "^.*$"
+					},
+					"name": {
+						"$id": "#root/required/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Strenght"
+						],
+						"pattern": "^.*$"
+					},
+					"value": {
+						"$id": "#root/required/items/value", 
+						"title": "Value", 
+						"type": "integer",
+						"examples": [
+							70
+						],
+						"default": 0
+					}
+				}
+			}
+
+		},
+		"itemSpeed": {
+			"$id": "#root/itemSpeed", 
+			"title": "Itemspeed", 
+			"type": "object",
+			"required": [
+				"stat",
+				"class",
+				"speed"
+			],
+			"properties": {
+				"stat": {
+					"$id": "#root/itemSpeed/stat", 
+					"title": "Stat", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"movSpeed"
+					],
+					"pattern": "^.*$"
+				},
+				"class": {
+					"$id": "#root/itemSpeed/class", 
+					"title": "Class", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						""
+					],
+					"pattern": "^.*$"
+				},
+				"speed": {
+					"$id": "#root/itemSpeed/speed", 
+					"title": "Speed", 
+					"type": "integer",
+					"examples": [
+						0
+					],
+					"default": 0
+				}
+			}
+		}
+,
+		"bonuses": {
+			"$id": "#root/bonuses", 
+			"title": "Bonuses", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/bonuses/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"type",
+					"name",
+					"stat",
+					"value",
+					"characterClass"
+				],
+				"properties": {
+					"type": {
+						"$id": "#root/bonuses/items/type", 
+						"title": "Type", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"mBonus"
+						],
+						"pattern": "^.*$"
+					},
+					"name": {
+						"$id": "#root/bonuses/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Enhanced Defense"
+						],
+						"pattern": "^.*$"
+					},
+					"stat": {
+						"$id": "#root/bonuses/items/stat", 
+						"title": "Stat", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"enhancedDefense"
+						],
+						"pattern": "^.*$"
+					},
+					"value": {
+						"$id": "#root/bonuses/items/value", 
+						"title": "Value", 
+						"type": "integer",
+						"examples": [
+							25
+						],
+						"default": 0
+					},
+					"characterClass": {
+						"$id": "#root/bonuses/items/characterClass", 
+						"title": "Characterclass", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							""
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		},
+		"sBonus": {
+			"$id": "#root/sBonus", 
+			"title": "Sbonus", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/sBonus/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"type",
+					"name",
+					"stat",
+					"value",
+					"characterClass",
+					"reqPieces"
+				],
+				"properties": {
+					"type": {
+						"$id": "#root/sBonus/items/type", 
+						"title": "Type", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"sBonus"
+						],
+						"pattern": "^.*$"
+					},
+					"name": {
+						"$id": "#root/sBonus/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Attacker takes Damage of "
+						],
+						"pattern": "^.*$"
+					},
+					"stat": {
+						"$id": "#root/sBonus/items/stat", 
+						"title": "Stat", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"attackerDamage"
+						],
+						"pattern": "^.*$"
+					},
+					"value": {
+						"$id": "#root/sBonus/items/value", 
+						"title": "Value", 
+						"type": "integer",
+						"examples": [
+							20
+						],
+						"default": 0
+					},
+					"characterClass": {
+						"$id": "#root/sBonus/items/characterClass", 
+						"title": "Characterclass", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							""
+						],
+						"pattern": "^.*$"
+					},
+					"reqPieces": {
+						"$id": "#root/sBonus/items/reqPieces", 
+						"title": "Reqpieces", 
+						"type": "integer",
+						"examples": [
+							2
+						],
+						"default": 0
+					}
+				}
+			}
+
+		}
+	}
+}

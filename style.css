@@ -62,8 +62,24 @@
   font-family: diablo;
 }
 
+.test {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  text-align: center;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.89);
+  padding: 0.5rem;
+  max-width: 60rem;
+  font-family: diablo;
+}
+
+.test p {
+  font-size: inherit;
+}
+
 .font-size {
-  font-size: 2.5rem;
+  font-size: 2.5rem !important;
 }
 
 .bg-image {

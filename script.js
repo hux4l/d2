@@ -2,68 +2,8 @@ const rune = document.querySelectorAll("img");
 const itemsElements = document.querySelectorAll(".container");
 const pageBody = document.querySelector("body");
 
-const items = [];
 let isOpen = false;
-const stat = {
-  name: "",
-  value: "",
-};
 
-const item = {
-  name: "",
-  type: "",
-  runes: [],
-  primaryStat: {
-    name: "",
-    value: "",
-  },
-
-  durability: {
-    curr: "",
-    max: "",
-  },
-
-  requirements: {
-    stat: "",
-    value: "",
-  },
-
-  weaponClass: {
-    class: "",
-    speed: "",
-  },
-
-  bonuses: {
-    bonus: {
-      name: "",
-      value: "",
-      bonusLevel: "",
-      characterClass: "",
-    },
-    setBonus: {
-      name: "",
-      value: "",
-      bonusLevel: "",
-      characterClass: "",
-    },
-  },
-
-  setBonuses: {
-    bonus: {
-      name: "",
-      value: "",
-      bonusLevel: "",
-      characterClass: "",
-    },
-  },
-
-  setItems: [
-    {
-      name: "",
-      active: true,
-    },
-  ],
-};
 const getPopupWidth = (element) => {
   return element.offsetWidth;
 };
@@ -74,6 +14,171 @@ const getPopupHeight = (element) => {
 
 const calculateBoundingRect = (element) => {
   return ({ left, right, top, bottom } = element.getBoundingClientRect());
+};
+
+const sigons = {
+  id: "sigons_complete_steel_4",
+  name: "Sigon's Shelter",
+  type: "Gothic Plate",
+  runes: [
+    {
+      name: "Tir",
+      rank: 3,
+      stat: {
+        name: "Mana per Kill",
+        stat: "manaPK",
+        value: "2",
+      },
+      iLvl: 13,
+      CLvl: 13,
+    },
+  ],
+  primaryStat: {
+    stat: "defense",
+    name: "Defense",
+    value: 170,
+  },
+
+  durability: {
+    curr: 35,
+    max: 55,
+  },
+
+  required: [
+    {
+      stat: "strenght",
+      name: "Strenght",
+      value: 70,
+    },
+    {
+      stat: "level",
+      name: "Level",
+      value: 70,
+    },
+  ],
+
+  itemSpeed: {
+    stat: "movSpeed",
+    class: "",
+    speed: 0,
+  },
+
+  bonuses: [
+    {
+      type: "mBonus",
+      name: "Enhanced Defense",
+      stat: "enhancedDefense",
+      value: 25,
+      characterClass: "",
+    },
+    {
+      type: "mBonus",
+      name: "Lightning Resist",
+      stat: "resistLightning",
+      value: 30,
+      characterClass: "",
+    },
+  ],
+
+  sBonus: [
+    {
+      type: "sBonus",
+      name: "Attacker takes Damage of ",
+      stat: "attackerDamage",
+      value: 20,
+      characterClass: "",
+      reqPieces: 2,
+    },
+  ],
+};
+
+const sigonsSet = {
+  name: "Sigons Complete Steel",
+  set: "sigons_complete_steel",
+  setBonuses: [
+    {
+      name: "% Life stolen per hit",
+      stat: "lifePerHit",
+      value: 10,
+      characterClass: "",
+      reqPieces: 2,
+    },
+    {
+      name: " Defense",
+      stat: "defense",
+      value: 100,
+      characterClass: "",
+      reqPieces: 3,
+    },
+    {
+      name: "% Fire Resistance",
+      stat: "resistFire",
+      value: 12,
+      characterClass: "",
+      reqPieces: 6,
+    },
+    {
+      name: "Atacker Takes Damage of ",
+      stat: "attackerDamage",
+      value: 12,
+      characterClass: "",
+      reqPieces: 6,
+    },
+    {
+      name: "Damage taken reduced by ",
+      stat: "damageTakenReduced",
+      value: 7,
+      characterClass: "",
+      reqPieces: 6,
+    },
+    {
+      name: " Maximum Fire Damage",
+      stat: "fireDamage",
+      value: 24,
+      characterClass: "",
+      reqPieces: 6,
+    },
+    {
+      name: " Mana",
+      stat: "mana",
+      value: 20,
+      characterClass: "",
+      reqPieces: 6,
+    },
+  ],
+
+  setItems: [
+    {
+      id: "sigons_complete_steel_1",
+      name: "Sigon's Guard",
+      active: false,
+    },
+    {
+      id: "sigons_complete_steel_2",
+      name: "Sigons Wrap",
+      active: false,
+    },
+    {
+      id: "sigons_complete_steel_3",
+      name: "Sigon's Sabot",
+      active: false,
+    },
+    {
+      id: "sigons_complete_steel_4",
+      name: "Sigon's Shelter",
+      active: false,
+    },
+    {
+      id: "sigons_complete_steel_5",
+      name: "Sigon's Visor",
+      active: false,
+    },
+    {
+      id: "sigons_complete_steel_6",
+      name: "Sigon's Gage",
+      active: false,
+    },
+  ],
 };
 
 const displayPopup = (e) => {
@@ -88,21 +193,53 @@ const displayPopup = (e) => {
   let imgTop = calculateBoundingRect(selElement).top;
   let imgBottom = calculateBoundingRect(selElement).bottom;
 
-  const popupTemplate = function (item) {
-    return `
-    <div class="container font-size hidden" data-id="2">
-      <div class="item name name-set">Sigon's Shelter</div>
-      <div class="item type name-set">Gothic Plate</div>
+  // check if mouse is in image
+  if (x > imgLeft && x < imgRight && y > imgTop && y < imgBottom) {
+    isOpen = true;
+    // display popup
+    itemsElements[e.target.dataset.item - 1].classList.remove("hidden");
+    if (imgTop > getPopupHeight(itemsElements[e.target.dataset.item - 1])) {
+      itemsElements[e.target.dataset.item - 1].style.left =
+        Math.trunc(
+          imgLeft +
+            (imgRight - imgLeft) / 2 -
+            getPopupWidth(itemsElements[e.target.dataset.item - 1]) / 2
+        ) + "px";
+      itemsElements[e.target.dataset.item - 1].style.top =
+        Math.trunc(
+          imgTop - getPopupHeight(itemsElements[e.target.dataset.item - 1])
+        ) + "px";
+    }
+    if (imgTop < getPopupHeight(itemsElements[e.target.dataset.item - 1])) {
+      itemsElements[e.target.dataset.item - 1].style.left =
+        Math.trunc(
+          imgLeft +
+            (imgRight - imgLeft) / 2 -
+            getPopupWidth(itemsElements[e.target.dataset.item - 1]) / 2
+        ) + "px";
+      itemsElements[e.target.dataset.item - 1].style.top =
+        Math.trunc(imgBottom) + "px";
+    }
+  }
+};
+
+const test = document.querySelector(".test");
+
+const generatePopup = (item) => {
+  return `
+    <div class="test font-size" data-id="2">
+      <div class="item name name-set">${item.name}</div>
+      <div class="item type name-set">${item.type}</div>
       <div class="item stats name-common">
-        <p>Defense: 170</p>
-        <p>Durabilit: 33 of 55</p>
+        <p>${item.primaryStat.name}: ${item.primaryStat.value}</p>
+        <p>Durability: ${item.durability.curr} of ${item.durability.max}</p>
       </div>
       <div class="item requirements name-common">
-        <p class="requirement-not">Required Strenght: 70</p>
-        <p>Required Level: 6</p>
+        <p class="requirement-not">Required ${item.required[0].name}: ${item.required[0].value}</p>
+        <p>Required ${item.required[1].name}: ${item.required[1].value}</p>
       </div>
       <div class="item bonuses name-magic">
-        <p>+25% Enhanced Defense</p>
+        <p>+${item.bonuses[0].value}% ${item.bonuses[0].name}</p>
         <p>Lightning Resist +30%</p>
       </div>
       <div class="item bonues-special name-set">
@@ -115,44 +252,16 @@ const displayPopup = (e) => {
         <p class="name-unique">Sigon's Complete Steel</p>
         <p class="requirement-not">Sigon's Guard</p>
         <p class="requirement-not">Sigon's Wrap</p>
-        <p>Sigon's Sabot</p>
+        <p class="requirement-not">Sigon's Sabot</p>
         <p>Sigon's Shelter</p>
         <p class="requirement-not">Sigon's Visor</p>
         <p class="requirement-not">Sigon's Gage</p>
       </div>
     </div>
     `;
-  };
-
-  popupTemplate();
-
-  // check if mouse is in image
-  if (x > imgLeft && x < imgRight && y > imgTop && y < imgBottom) {
-    isOpen = true;
-    // display popup
-    itemsElements[e.target.dataset.item - 1].classList.remove("hidden");
-    if (imgTop > getPopupHeight(itemsElements[e.target.dataset.item - 1])) {
-      console.log(imgLeft + (imgRight - imgLeft) / 2);
-      itemsElements[e.target.dataset.item - 1].style.left =
-        imgLeft +
-        (imgRight - imgLeft) / 2 -
-        getPopupWidth(itemsElements[e.target.dataset.item - 1]) / 2 +
-        "px";
-      itemsElements[e.target.dataset.item - 1].style.top =
-        imgTop -
-        getPopupHeight(itemsElements[e.target.dataset.item - 1]) +
-        "px";
-    }
-    if (imgTop < getPopupHeight(itemsElements[e.target.dataset.item - 1])) {
-      itemsElements[e.target.dataset.item - 1].style.left =
-        imgLeft +
-        (imgRight - imgLeft) / 2 -
-        getPopupWidth(itemsElements[e.target.dataset.item - 1]) / 2 +
-        "px";
-      itemsElements[e.target.dataset.item - 1].style.top = imgBottom + "px";
-    }
-  }
 };
+
+test.insertAdjacentHTML("beforeend", generatePopup(sigons));
 
 // gets mouse position from page
 document.onmousemove = (e) => {

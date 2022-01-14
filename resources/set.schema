@@ -1,0 +1,152 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1637177396.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"name",
+		"set",
+		"setBonuses",
+		"setItems"
+	],
+	"properties": {
+		"name": {
+			"$id": "#root/name", 
+			"title": "Name", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"Sigons Complete Steel"
+			],
+			"pattern": "^.*$"
+		},
+		"set": {
+			"$id": "#root/set", 
+			"title": "Set", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"sigons_complete_steel"
+			],
+			"pattern": "^.*$"
+		},
+		"setBonuses": {
+			"$id": "#root/setBonuses", 
+			"title": "Setbonuses", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/setBonuses/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"name",
+					"stat",
+					"value",
+					"characterClass",
+					"reqPieces"
+				],
+				"properties": {
+					"name": {
+						"$id": "#root/setBonuses/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"% Life stolen per hit"
+						],
+						"pattern": "^.*$"
+					},
+					"stat": {
+						"$id": "#root/setBonuses/items/stat", 
+						"title": "Stat", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"lifePerHit"
+						],
+						"pattern": "^.*$"
+					},
+					"value": {
+						"$id": "#root/setBonuses/items/value", 
+						"title": "Value", 
+						"type": "integer",
+						"examples": [
+							10
+						],
+						"default": 0
+					},
+					"characterClass": {
+						"$id": "#root/setBonuses/items/characterClass", 
+						"title": "Characterclass", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							""
+						],
+						"pattern": "^.*$"
+					},
+					"reqPieces": {
+						"$id": "#root/setBonuses/items/reqPieces", 
+						"title": "Reqpieces", 
+						"type": "integer",
+						"examples": [
+							2
+						],
+						"default": 0
+					}
+				}
+			}
+
+		},
+		"setItems": {
+			"$id": "#root/setItems", 
+			"title": "Setitems", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/setItems/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"id",
+					"name",
+					"active"
+				],
+				"properties": {
+					"id": {
+						"$id": "#root/setItems/items/id", 
+						"title": "Id", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"sigons_complete_steel_1"
+						],
+						"pattern": "^.*$"
+					},
+					"name": {
+						"$id": "#root/setItems/items/name", 
+						"title": "Name", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Sigon's Guard"
+						],
+						"pattern": "^.*$"
+					},
+					"active": {
+						"$id": "#root/setItems/items/active", 
+						"title": "Active", 
+						"type": "boolean",
+						"examples": [
+							false
+						],
+						"default": true
+					}
+				}
+			}
+
+		}
+	}
+}
